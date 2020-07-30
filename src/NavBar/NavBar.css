@@ -1,32 +1,23 @@
+* {
+    transition: ease all 1s;
+}
+
 .navbar-container {
 	padding: 0px;
 }
 
 .navbar-strip {
-	padding: 20px 0px;
+	padding: 40px 0px;
 	width: 100%;
 	margin: 0px;
 }
 
 .navbar-links-group {
-	padding: 0px 5%;
-	padding-top: 18px;
+	padding: 0px 0.05em;
 	text-align: right;
-	align-content: right;
+    align-content: right;
+    padding-right: 5%;
 }
-
-	@media screen and (max-width: 620px){
-	    .navbar-links-group {
-	        padding: 18px 0px 0px 0px;
-	    }
-	   /* .logo-box {
-	    	padding-left: 1%;
-	    }*/
-	    .logo img {
-	    	width: 50px;
-			height: 40px;
-	    }
-	}
 
 .navbar-link {
     font-size: 16px;
@@ -37,7 +28,11 @@
 	font-weight: normal;
 }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 640px) {
+        .navbar-links-group {
+            padding-right: 0;
+        }
+
         .navbar-link {
             font-size: 14px;
             letter-spacing: .10em;
@@ -48,12 +43,20 @@
     .navbar-link:hover {
         color: hsl(209, 59%, 43%);
         text-decoration: none;
-        transition: .3s ease;
+        transition: .35s ease;
     }
 
     .navbar-link:active {
         border-bottom: 1px black;
         text-decoration: none;
+    }
+
+    #software {
+        color: hsl(209, 59%, 43%);
+    }
+
+    #software:hover {
+        color: black;
     }
 
 .logo-box {
@@ -62,17 +65,22 @@
 	padding-right: 0px;
 }
 
-	@media screen and (max-width: 620px) {
+    .logo {
+        margin: 0px;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 80px;
+    }
+
+    @media screen and (max-width: 640px) {
 	    .logo-box {
 	    	padding-left: 2%;
-	    }
+        }
+        
+        .logo img {
+            width: 80px;
+            height: 64px;
+        }
 	}
-
-.logo {
-	margin: 0px;
-}
-
-.logo img {
-	width: 100px;
-	height: 80px;
-}
