@@ -7,8 +7,12 @@ import Photography from './Photography/Photography';
 function App() {
   return (
     <div className="App">
-      <NavBar></NavBar>
-      <Photography></Photography>
+      <div class="navbar-container justify-content-center">
+        <NavBar></NavBar>
+      </div>
+      <div class="photography-container justify-content-center">
+        <Photography></Photography>
+      </div>
     </div>
   );
 }

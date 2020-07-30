@@ -1,0 +1,25 @@
+* {
+    transition: ease all 1s;
+}
+
+.image-container {
+    height: 80%;
+    padding: 1em 0;
+}
+
+    .image-container img {
+        -webkit-box-shadow: 0px 1px 55px 10px rgba(0,0,0,0.3); 
+        box-shadow: 0px 1px 55px 10px rgba(0,0,0,0.3);
+    }
+
+.thumbnail-slider-container {
+    padding: 5vh 0;
+}
+
+    .thumbnail-slider-container img {
+        height: 5vh;
+        width: 5vw;
+        margin: 0 0.3vw;
+        -webkit-box-shadow: 0px 5px 13px -7px #000000, 0px 14px 15px 5px rgba(0,0,0,0); 
+        box-shadow: 0px 5px 13px -7px #000000, 0px 14px 15px 5px rgba(0,0,0,0);
+    }
