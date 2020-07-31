@@ -3,9 +3,15 @@
 }
 
 .image-container {
-    height: 70%;
-    padding: 2% 0;
+    height: 90%;
+    margin-top: 3vh;
 }
+    
+    @media screen and (max-width: 680px) {
+        .image-container {
+            margin-top: 10vh;
+        }
+    }
 
     .image-container img {
         -webkit-box-shadow: 0px 5px 55px 10px rgba(0,0,0,0.3); 
@@ -34,6 +40,7 @@
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
+        margin-top: 6vh;
         padding: 0;
     }
 
