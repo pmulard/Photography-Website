@@ -26,6 +26,12 @@
         padding: 0;
     }
 
+        @media screen and (min-width: 680px) {
+            .scrolling-wrapper {
+                margin-top: 4vh;
+            }
+        }
+
         .scrolling-wrapper .card {
             display: inline-block;
             width: 9vh;
@@ -35,22 +41,24 @@
 
             .scrolling-wrapper .card:hover {
                 transform: translateY(-10px);
-                box-shadow: 0 6px 10px -3px rgb(155, 154, 154);
+                box-shadow: 0 15px 15px -12px rgb(155, 154, 154);
             }
 
+        /* doesn't work at the moment */
         .card-start {
             margin-left: 0;
             margin-right: 5px;
         }
 
+        /* doesn't work at the moment */
         .card-end {
             margin-left: 5px;
             margin-right: 0;
         }
 
             .card img {
-                width: 100%;
                 height: 100%;
+                width: 100%;
             }
 
 

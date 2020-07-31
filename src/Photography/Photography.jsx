@@ -21,7 +21,7 @@ export default class Photography extends React.Component {
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
                         <div class="card">
-                            <img src="logoBlack.png" alt="" class="img-fluid mx-auto d-block"/>
+                            <img src="vertPhoto.jpg" alt="" class="img-fluid mx-auto d-block"/>
                         </div>
                     </div>
                 </div>

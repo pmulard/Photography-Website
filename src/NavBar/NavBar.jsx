@@ -11,7 +11,7 @@ export default class Navbar extends React.Component{
                             <img id="logo-img" src="logoBlack.png" class="d-inline-block align-top" alt=""/>
                         </a>
 			        </div>
-                    <div class="navbar-links-group col-9 col-sm-8 col-lg-8 col-xl-6">
+                    <div class="navbar-links-group col-8 col-sm-8 col-lg-8 col-xl-8">
                         <a class="navbar-link" href="#">Photography</a>
                         <a class="navbar-link" href="#">Film</a>
                         <a class="navbar-link" href="#">Sculpture</a>
