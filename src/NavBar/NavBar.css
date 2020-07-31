@@ -2,13 +2,10 @@
     transition: ease all 1s;
 }
 
-.navbar-container {
-	padding: 0px;
-}
-
 .navbar-strip {
 	padding: 40px 0px;
-	width: 100%;
+    width: 100%;
+    height: 100%;
 	margin: 0px;
 }
 
@@ -45,8 +42,9 @@
     }
 
     .navbar-link:hover {
-        color: hsl(209, 59%, 43%);
-        text-decoration: none;
+        background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         transition: .35s ease;
     }
 
@@ -56,11 +54,15 @@
     }
 
     #software {
-        color: hsl(209, 59%, 43%);
+        background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     #software:hover {
-        color: black;
+        background: -webkit-linear-gradient(black, black);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
 .logo-box {

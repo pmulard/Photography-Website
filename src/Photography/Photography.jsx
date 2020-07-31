@@ -17,24 +17,44 @@ export default class Photography extends React.Component {
 
     render() {
         return (
-            <div class="container-fluid align-items-center" id="max-container">
+            <div class="container-fluid" id="max-container">
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
-                        <img src="logoBlack.png" alt="" class="img-fluid mx-auto d-block"/>
+                        <div class="card">
+                            <img src="logoBlack.png" alt="" class="img-fluid mx-auto d-block"/>
+                        </div>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center">
-                    <div class="thumbnail-slider-container col-10 col-md-8 col-lg-8">
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
-                        <img src="logoBlack.png" alt=""/>
+                    <div class="scrolling-wrapper col-8 col-md-7 col-lg-6 col-xl-5" align="center">
+                        <div class="card card-start"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card"><img src="logoBlack.png" alt=""/></div>
+                        <div class="card card-end"><img src="logoBlack.png" alt=""/></div>
                     </div>
                 </div>
             </div>
