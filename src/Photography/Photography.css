@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
 * {
     transition: ease all 1s;
 }
@@ -14,8 +16,40 @@
     }
 
     .image-container img {
-        -webkit-box-shadow: 0px 0px 20px 8px rgba(0,0,0,0.3); 
-        box-shadow: 0px 0px 20px 8px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0px 0px 30px 12px rgba(0,0,0,0.4); 
+        box-shadow: 0px 0px 30px 12px rgba(0,0,0,0.4);
+        max-height: 540px;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+        /* border: 10px solid white; */
+    }
+
+        #image-location {
+            margin-left: 7vw;
+            font-size: 18px;
+            letter-spacing: .5em;
+            color: #bfbfbf;
+            padding-bottom: 10px;
+            font-family: 'Cinzel', serif;
+        }
+
+            @media screen and (max-width: 680px) {
+                #image-location {
+                    margin-left: 11vw;
+                    font-size: 14px;
+                }
+            }
+
+    .trapezoid {
+        border-bottom: 50px solid #d9d9d9;
+        border-left: 55px solid transparent;
+        border-right: 55px solid transparent;
+        height: 0;
+        position: absolute;
+        transform: translateY(4.3vh);
+
     }
 
     .scrolling-wrapper {
