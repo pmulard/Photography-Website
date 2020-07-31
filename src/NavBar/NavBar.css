@@ -48,11 +48,19 @@
         }
     }
 
+    @media screen and (max-width: 540px) {
+        .navbar-link {
+            font-size: 10px;
+            letter-spacing: .08em;
+            padding: 10px;
+        }
+    }
+
     .navbar-link:hover {
         background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        transition: .35s ease;
+        /* transition: 1s ease; Doesn't work */
     }
 
     .navbar-link:active {
@@ -86,6 +94,16 @@
         width: 120px;
         height: 90px;
     }
+
+        #logo-img-2 { 
+            position: absolute; 
+            top: 0; 
+            right: 0; 
+        } 
+
+            #logo-img-2:hover {
+                opacity: 0;
+            }
 
     @media screen and (max-width: 960px) {
 	    .logo-box {
