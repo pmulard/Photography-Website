@@ -11,13 +11,13 @@
     
     @media screen and (max-width: 680px) {
         .image-container {
-            margin-top: 10vh;
+            margin-top: 9vh;
         }
     }
 
     .image-container img {
-        -webkit-box-shadow: 0px 0px 30px 12px rgba(0,0,0,0.4); 
-        box-shadow: 0px 0px 30px 12px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.5); 
+        box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.5);
         max-height: 540px;
         max-width: 100%;
         height: auto;
@@ -26,13 +26,22 @@
         /* border: 10px solid white; */
     }
 
+        @media screen and (max-width: 680px) {
+            .image-container img {
+                max-height: 480px;
+            }
+        }
+
         #image-location {
             margin-left: 7vw;
             font-size: 18px;
             letter-spacing: .5em;
-            color: #bfbfbf;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             font-family: 'Cinzel', serif;
+            background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
         }
 
             @media screen and (max-width: 680px) {
@@ -43,14 +52,21 @@
             }
 
     .trapezoid {
-        border-bottom: 50px solid #d9d9d9;
+        border-bottom: 50px solid;
+        border-color: #F2F2F2;
         border-left: 55px solid transparent;
         border-right: 55px solid transparent;
         height: 0;
         position: absolute;
-        transform: translateY(4.3vh);
-
+        transform: translateY(3vh);
+        box-shadow: 0 13px 15px -12px rgb(155, 154, 154);
     }
+
+        @media screen and (max-width: 680px) {
+            .trapezoid {
+                transform: translateY(3.6vh)
+            }
+        }
 
     .scrolling-wrapper {
         overflow-x: scroll;
@@ -71,6 +87,7 @@
             width: 9vh;
             height: 7vh;
             margin: 15px 5px;
+            margin-bottom: 30px;
         }
 
             .scrolling-wrapper .card:hover {

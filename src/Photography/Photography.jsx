@@ -20,7 +20,7 @@ export default class Photography extends React.Component {
             <div class="container-fluid" id="max-container">
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
-                        <h1 id="image-location">California</h1>
+                        <div id="image-location">California</div>
                         <img src="horizPhoto.jpg" alt="" class="img-fluid mx-auto d-block"/>
                     </div>
                 </div>
