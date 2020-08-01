@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './NavBar/NavBar';
 import Photography from './Photography/Photography';
+import Film from './Film/Film';
+// import Sculpture from './Sculpture/Sculpture';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <div class="navbar-container justify-content-center">
-        <NavBar></NavBar>
-      </div>
-      <div class="photography-container justify-content-center">
-        <Photography></Photography>
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={() => <Photography />} />
+          <Route path="/film" exact component={() => <Film />} />
+          {/* <Route path="/sculpture" exact component={() => <Sculpture />} /> */}
+        </Switch>
+      </Router>
     </div>
   );
 }

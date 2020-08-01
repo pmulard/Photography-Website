@@ -1,5 +1,6 @@
 import React from 'react';
 import './Photography.css';
+import NavBar from '../NavBar/NavBar';
 
 export default class Photography extends React.Component {
     constructor(props) {
@@ -18,6 +19,9 @@ export default class Photography extends React.Component {
     render() {
         return (
             <div class="container-fluid" id="max-container">
+                <div class="row justify-content-center align-items-center">
+                    <NavBar/>
+                </div>
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
                         <div id="image-location">California</div>

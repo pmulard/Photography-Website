@@ -1,7 +1,7 @@
 import React from 'react';
 import './Film.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './NavBar/NavBar';
+import NavBar from '../NavBar/NavBar';
 
 function Film (props) {
     return (
