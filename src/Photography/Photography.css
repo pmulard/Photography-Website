@@ -123,11 +123,20 @@
             border-radius: 10px;
         }
         
-        ::-webkit-scrollbar-thumb {
+        ::-webkit-scrollbar-thumb:horizontal {
             background:linear-gradient(to right, hsl(280, 36%, 62%),hsl(209, 59%, 70%), hsl(181, 36%, 62%)); 
             border-radius: 10px;
         }
         
-        ::-webkit-scrollbar-thumb:hover {
+        ::-webkit-scrollbar-thumb:hover:horizontal {
             background:linear-gradient(to right, hsl(280, 36%, 72%),hsl(209, 59%, 80%), hsl(181, 36%, 72%));
+        }
+
+        ::-webkit-scrollbar-thumb:vertical {
+            background:linear-gradient(hsl(280, 36%, 62%),hsl(209, 59%, 70%), hsl(181, 36%, 62%)); 
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover:vertical {
+            background:linear-gradient(hsl(280, 36%, 72%),hsl(209, 59%, 80%), hsl(181, 36%, 72%));
         }
