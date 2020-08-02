@@ -31,7 +31,7 @@
     } 
 
         .card-back-image:hover {
-            opacity: .2;
+            opacity: .3;
         }
 
     .film-name {
@@ -48,7 +48,29 @@
         position: absolute; 
         bottom: 0; 
         left: 0;
-        background-color: white;
+        color: white;
+        background-color: rgba(255, 255, 255, .3);
         border-radius: 0px 0px 20px 20px;
-        padding: 10px;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
     }
+
+        .film-description {
+            padding: 0;
+            float: left;
+        }
+
+        .external-links-container {
+            padding: 0;
+            float: right;
+            text-align: center;
+            margin: 0;
+        }
+
+        .external-links-container img {
+            height: 30px;
+            width: 30px;
+            margin: 4px 8px;
+            border-radius: 0px;
+        }

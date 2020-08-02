@@ -32,12 +32,12 @@ export default class Film extends React.Component {
                                     <div class="card-back-image"></div>
                                     <div class="film-name">Hiking and Fishing the High Sierra</div>
                                     <div class="card-info-box">
-                                        <div class="film-description">
-                                            A five day trek through the southern high sierra, hiking 12,000' mountain passes and fishing beautiful high alpine lakes abundant with trout.
+                                        <div class="film-description col-10">
+                                            A five day trek in the California High Sierra, hiking 12,000' mountain passes and fishing alpine lakes abundant with trout.
                                         </div>
-                                        <div class="external-links-container">
-                                            <img class="youtube" src="" alt=""/>
-                                            <img class="vimeo" src="" alt=""/>
+                                        <div class="external-links-container col-2">
+                                            <img class="youtube" src="youtube.svg" alt=""/>
+                                            <img class="vimeo" src="vimeo.svg" alt=""/>
                                         </div>
                                     </div>
                                 </div>
