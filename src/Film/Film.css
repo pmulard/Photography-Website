@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600&family=Mulish:wght@200;300;400&family=Raleway:wght@200;300&display=swap');
 * {
     transition: ease all 1s;
+    /* font-family: 'Josefin Slab', serif; */
+    /* font-family: 'Mulish', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 0.05em;
 }
 
 .film-container {
@@ -8,43 +15,51 @@
 }
 
 .film-card {
-    padding: 1px;
+    padding: 0px;
     margin: 3vw;
     -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.5); 
     box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.5);
     border-radius: 20px;
+    border: none;
 }
 
     .film-card img {
         border-radius: 20px;
     }
 
-    .card-back-image { 
-        position: absolute; 
-        top: 0; 
-        right: 0; 
-        background-color: black;
-        width: 100%;
-        height: 100%;
-        opacity: 0.0;
-        border-radius: 20px;
-    } 
+        .card:hover > #card-image {
+            -webkit-filter: brightness(50%);
+        }
 
-        .card-back-image:hover {
-            opacity: .3;
+        .card:hover > .film-name {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        .card:hover > .card-info-box {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0px);
         }
 
     .film-name {
+        transform: translateX(-30px);
+        opacity: 0;
+        visibility: hidden;
         position: absolute; 
         top: 0; 
         left: 0;
         color: white;
         background-color: rgba(255, 255, 255, .3);
         border-radius: 20px 0px;
-        padding: 10px;
+        padding: 10px 15px;
     }
 
     .card-info-box {
+        transform: translateX(30px);
+        opacity: 0;
+        visibility: hidden;
         position: absolute; 
         bottom: 0; 
         left: 0;
@@ -59,6 +74,9 @@
         .film-description {
             padding: 0;
             float: left;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            /* font-weight: 400; */
         }
 
         .external-links-container {
@@ -74,3 +92,24 @@
             margin: 4px 8px;
             border-radius: 0px;
         }
+
+@media screen and (max-width: 680px) {
+    * {
+        font-size: 15px;
+    }
+
+    .card-info-box {
+        padding: 8px 12px;
+    }
+    
+    .film-description {
+        font-size: 13px;
+    }
+
+    .external-links-container img {
+        height: 20px;
+        width: 20px;
+        margin: 4px 8px;
+        border-radius: 0px;
+    }
+}
