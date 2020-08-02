@@ -19,7 +19,7 @@ export default class Photography extends React.Component {
     render() {
         return (
             <div class="container-fluid" id="max-container">
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center" id="navbar-row">
                     <NavBar/>
                 </div>
                 <div class="row justify-content-center align-items-center">

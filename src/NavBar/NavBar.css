@@ -3,8 +3,8 @@
 }
 
 .navbar-strip {
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     width: 100%;
     height: 100%;
 	margin: 0px;
@@ -60,12 +60,7 @@
         background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        /* transition: 1s ease; Doesn't work */
-    }
-
-    .navbar-link:active {
-        border-bottom: 1px black;
-        text-decoration: none;
+        /* transition: 0.5s ease; Doesn't work */
     }
 
     #software {
@@ -103,6 +98,7 @@
 
             #logo-img-2:hover {
                 opacity: 0;
+                transition: ease all 0.5s;
             }
 
     @media screen and (max-width: 960px) {
@@ -124,6 +120,13 @@
         .logo img {
             width: 80px;
             height: 64px;
+        }
+    }
+
+    @media screen and (max-width: 540px) {
+        .logo img {
+            width: 64px;
+            height: 51px;
         }
     }
     
