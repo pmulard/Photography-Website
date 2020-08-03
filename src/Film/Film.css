@@ -34,6 +34,7 @@
 
         .card:hover > .card-image {
             -webkit-filter: brightness(50%);
+            filter: brightness(50%);
         }
 
         .card:hover > .film-name {
@@ -100,6 +101,7 @@
 
         .external-links-container img:hover {
             -webkit-filter: brightness(70%);
+            filter: brightness(70%);
             transition: ease all .5s;
         }
 
