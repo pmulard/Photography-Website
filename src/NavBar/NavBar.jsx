@@ -8,8 +8,8 @@ export default class Navbar extends React.Component{
                 <div class="row justify-content-between navbar-strip align-items-center">
 			        <div class="logo-box col-auto shrink">
                         <a class="logo" href="/">
-                            <img id="logo-img" src="logoColor2.png" class="d-inline-block align-top" alt="Peter Mulard" onMouseOver="this.src='logoColor4.png'"/>
-                            <img id="logo-img-2" src="logoColor3.png" class="d-inline-block align-top" alt="Peter Mulard" onMouseOver="this.src='logoColor4.png'"/>
+                            <img id="logo-img" src="icons/logoColor2.png" class="d-inline-block align-top" alt="Peter Mulard" onMouseOver="this.src='logoColor4.png'"/>
+                            <img id="logo-img-2" src="icons/logoColor3.png" class="d-inline-block align-top" alt="Peter Mulard" onMouseOver="this.src='logoColor4.png'"/>
                         </a>
 			        </div>
                     <div class="navbar-links-group col-8 col-sm-8 col-lg-8 col-xl-8">
