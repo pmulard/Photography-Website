@@ -7,13 +7,15 @@ export default class Photography extends React.Component {
         super(props)
 
         this.state = {
-            array: []
+            photos: []
         };
     }
 
     // When app loads for the first time
     componentDidMount() {
-        
+        fetch('api/photoInfo')
+            .then(res => res.json())
+            .then(photoInfo => this.setState({photos: photoInfo}, () => console.log('Fetched photo info..', photoInfo)));
     }
 
     render() {
