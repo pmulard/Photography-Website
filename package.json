@@ -1,0 +1,30 @@
+{
+  "name": "photography_website",
+  "version": "1.0.0",
+  "description": "Photography portfolio website (React/Node/Express)",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmulard/Photography-Website.git"
+  },
+  "author": "Peter Mulard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmulard/Photography-Website/issues"
+  },
+  "homepage": "https://github.com/pmulard/Photography-Website#readme"
+}
