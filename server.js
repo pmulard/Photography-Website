@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-app.get('/api/customers', (req, res) => {
+app.get('/api/photoInfo', (req, res) => {
     // Get from database but we will hardcode for now
     const photoInfo = [
         {id: 'WindAndSea Beach', fileName: 'WindAndSea_Beach.jpg', prints: {print2x3: 20.00, print4x6: 26.00}},
