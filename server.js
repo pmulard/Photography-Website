@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // DB Configuration
 // ** Need to fix bug and hook up with config/keys.js **
-const db = 'mongodb://localhost:27017/photography_website';
+const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
