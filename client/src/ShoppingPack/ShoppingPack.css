@@ -2,18 +2,14 @@
     transition: ease all 1s;
 }
 
-#navbar-row {
-    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1)5; 
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.15);
-}
-
 #pack-header-container {
     padding-top: 30px;
 }
 
-    #pack-header {
+    .pack-header {
         font-size: 28px;
         padding: 10px 0;
+        font-weight: 300;
     }
 
     #pack-description {
@@ -33,6 +29,7 @@
         text-decoration: none;
         background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
@@ -41,9 +38,67 @@
             filter: brightness(95%);
             transition: 0.5s ease;
         }
+    
+    #pack-container {
+        padding-top: 20px;
+    }
 
-@media screen and (max-width: 680px) {
-    #pack-header {
+
+
+.photo-item {
+    height: auto;
+    min-height: 11vh;
+    margin: 5px 0 10px 0;
+    border: 1px solid rgb(207, 210, 219);
+    border-radius: 10px;
+    align-content: center;
+}
+
+    .photo-item-img-container {
+        padding: 0;
+        text-align: center;
+    }
+
+        .photo-item-img-container img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 10vw;
+            padding: 1vw 0 1vw 2vw;
+        }
+
+    .remove-button {
+        position: absolute;
+        top: -17px;
+        right: 4px;
+    }
+    
+    .photo-item-info-container {
+        padding: 1vw 2vw 1vw 2vw;
+    }
+
+        .photo-item-info-box {
+            margin-top: auto;
+        }
+
+            .photo-item-info-label {
+                font-weight: 500;
+                font-size: 1.4em;
+            }
+
+            .photo-item-info-value {
+                font-weight: 200;
+                font-size: 1.2em;
+                float: right;
+            }
+
+            .quantity-decrease, .quantity-increase {
+                font-weight: 200;;
+                font-size: 1.2em;
+            }
+
+@media screen and (max-width: 780px) {
+    .pack-header {
         font-size: 24px;
         padding: 7px 0;
     }
@@ -61,4 +116,30 @@
             border-radius: 1.5em;
             font-size: 16px;
         }
+
+    .photo-item-info-label {
+        font-size: 1.0em;
+    }
+
+    .photo-item-info-value {
+        font-size: .8em;
+    }
+
+    .quantity-decrease, .quantity-increase {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .photo-item-info-label {
+        font-size: 1.2em;
+    }
+
+    .photo-item-info-value {
+        font-size: 1em;
+    }
+
+    .quantity-decrease, .quantity-increase {
+        font-size: 1em;
+    }
 }
