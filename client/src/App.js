@@ -15,7 +15,7 @@ function App() {
           <Route path="/" exact component={() => <Photography />} />
           <Route path="/film" exact component={() => <Film />} />
           {/* <Route path="/sculpture" exact component={() => <Sculpture />} /> */}
-          <Route path="/shop/pack" exact component={() => <ShoppingPack />} />
+          <Route path="/pack" exact component={() => <ShoppingPack />} />
         </Switch>
       </Router>
     </div>
