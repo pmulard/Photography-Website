@@ -59,6 +59,7 @@ export default class ShoppingPack extends React.Component {
                                         </div>
                                     </div>   
                                 </div>
+                                <button type="button" class="remove-button btn btn-outline-danger col-1">x</button>
                             </div>
                             <div class="photo-item row">
                                 <div class="photo-item-img-container col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
@@ -88,6 +89,7 @@ export default class ShoppingPack extends React.Component {
                                         </div>
                                     </div>   
                                 </div>
+                                <button type="button" class="remove-button btn btn-outline-danger col-1">x</button>
                             </div>
                             <div class="photo-item row">
                                 <div class="photo-item-img-container col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
@@ -117,7 +119,20 @@ export default class ShoppingPack extends React.Component {
                                         </div>
                                     </div>   
                                 </div>
+                                <button type="button" class="remove-button btn btn-outline-danger col-1">x</button>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7 justify-content-between align-items-center" id="order-total-container">
+                        {/* <div id="checkout-button" class="col-6">
+                            <a href="/">Checkout</a>
+                        </div> */}
+                        <button type="button" class="btn btn-primary col-6 col-sm-7 col-md-8" id="checkout-button">Checkout</button>
+                        <div class="order-total-info-box col-auto">
+                            <div class="order-total-header">Order Total:</div>
+                            <div class="order-total-value">$128.00</div>
                         </div>
                     </div>
                 </div>

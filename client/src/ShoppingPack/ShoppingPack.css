@@ -52,6 +52,7 @@
     border: 1px solid rgb(207, 210, 219);
     border-radius: 10px;
     align-content: center;
+    position: relative;
 }
 
     .photo-item-img-container {
@@ -69,8 +70,15 @@
 
     .remove-button {
         position: absolute;
-        top: -17px;
-        right: 4px;
+        top: -1px;
+        right: -1px;
+        font-size: .9em;
+        font-weight: 400;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        border: none;
+        border-radius: 1px 10px 1px 5px;
     }
     
     .photo-item-info-container {
@@ -83,19 +91,68 @@
 
             .photo-item-info-label {
                 font-weight: 500;
-                font-size: 1.4em;
+                font-size: 1.3em;
             }
 
             .photo-item-info-value {
                 font-weight: 200;
-                font-size: 1.2em;
+                font-size: 1.1em;
                 float: right;
             }
 
             .quantity-decrease, .quantity-increase {
                 font-weight: 200;;
-                font-size: 1.2em;
+                font-size: 1.3em;
             }
+
+#order-total-container {
+    padding-top: 60px;
+    padding-bottom: 150px;
+    display: flex;
+}
+
+    #checkout-button {
+        padding: 20px;
+    }
+
+    .order-total-info-box {
+        display: inline;
+        text-align: right;
+        white-space: pre-line;
+    }
+
+        .order-total-info-box div {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+    /* #checkout-button {
+        padding: 18px 0;
+        display: inline; 
+        height: 100px;   
+        width: 100%;
+    }
+
+    #checkout-button a {
+        padding: .8em 1.4em;
+        border: 2px solid rgb(227, 231, 243);
+        border-radius: 1.5em;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+        #checkout-button a:hover {
+            -webkit-filter: brightness(95%);
+            filter: brightness(95%);
+            transition: 0.5s ease;
+        } */
+
+
 
 @media screen and (max-width: 780px) {
     .pack-header {
@@ -127,6 +184,11 @@
 
     .quantity-decrease, .quantity-increase {
         font-size: .8em;
+    }
+
+    .remove-button {
+        height: 22px;
+        width: 22px;
     }
 }
 
