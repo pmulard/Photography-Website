@@ -8,7 +8,14 @@ const initialState = {
 
 // Evaluates what type we are dealing with
 export default function(state = initialState, action) {
+    // Looks at addPackItemActions.js for type, then matches
+    // payload. (Can call payload whatever you want)
     switch(action.type) {
+        case ADD_PACK_ITEM:
+            return {
+                ...state,
+                items: action.payload
+            }
         default:
             return state;
     }

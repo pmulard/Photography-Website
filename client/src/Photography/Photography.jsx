@@ -3,20 +3,6 @@ import './Photography.css';
 import NavBar from '../NavBar/NavBar';
 
 export default class Photography extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            photos: []
-        };
-    }
-
-    // When app loads for the first time
-    componentDidMount() {
-        fetch('api/photoInfo')
-            .then(res => res.json())
-            .then(photoInfo => this.setState({photos: photoInfo}, () => console.log('Fetched photo info..', photoInfo)));
-    }
 
     render() {
         return (
