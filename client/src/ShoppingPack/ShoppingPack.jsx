@@ -32,7 +32,7 @@ export default class ShoppingPack extends React.Component {
                         <div class="pack-header">Pack:</div>
                         <div id="photo-item-container">
                             <div class="photo-item row">
-                                <div class="photo-item-img-container col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <div class="photo-item-img-container col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                                     <img src="/photographyPhotos/Fossile_Lake.jpg" alt=""/>
                                 </div>
                                 <div class="photo-item-info-container container-fluid col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 ">
@@ -62,7 +62,7 @@ export default class ShoppingPack extends React.Component {
                                 <button type="button" class="remove-button btn btn-outline-danger col-1">x</button>
                             </div>
                             <div class="photo-item row">
-                                <div class="photo-item-img-container col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <div class="photo-item-img-container col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                                     <img src="/photographyPhotos/Onion_Valley_MilkyWay.jpg" alt=""/>
                                 </div>
                                 <div class="photo-item-info-container col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 ">
@@ -92,7 +92,7 @@ export default class ShoppingPack extends React.Component {
                                 <button type="button" class="remove-button btn btn-outline-danger col-1">x</button>
                             </div>
                             <div class="photo-item row">
-                                <div class="photo-item-img-container col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <div class="photo-item-img-container col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                                     <img src="/photographyPhotos/Fish_Bowl_Sunset.jpg" alt=""/>
                                 </div>
                                 <div class="photo-item-info-container col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 ">
