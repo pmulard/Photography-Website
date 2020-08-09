@@ -33,7 +33,11 @@ app.listen(port, () => console.log(`Server started on port ${port}`));
 // GET from db and serve @ localhost:5000/api/photoInfo
 app.get('/api/photoInfo', (req, res) => {
     // Get from database but we will hardcode for now
-    const photoInfo = [];
+    const photoInfo = [
+        {id: '111', fileName: 'WindAndSea_Beach.jpg', prints: {print2x3: 20.00, print4x6: 26.00}},
+        {id: '222', fileName: 'Canyonlands_MilkyWay.jpg', prints: {print5x7: 30.00, print10x14: 38.00}},
+        {id: '333', fileName: 'Genie_Lamp_Rock.jpg', prints: {print2x3: 20.00, print4x6: 26.00}}
+    ];
 
     res.json(photoInfo);
 })
