@@ -3,6 +3,7 @@ const router = express.Router();
 
 //Photo Item Model
 const PhotoItem = require('../../models/photoItem');
+const { restart } = require('nodemon');
 
 // @route   GET api/photoItems
 // @desc    Get all photo items from database
@@ -29,5 +30,15 @@ router.post('/', (req, res) => {
 
     newPhotoItem.save().then(photoItem => res.json(photoItem));
 });
+
+// @route   DELETE api/photoItems/:id
+// @desc    Delete photo item from database
+// @access  Public
+router.post('/:id', (req, res) => {
+    PhotoItem.findById(req.params.id)
+        .then(item => item.remove().then(() => restart.json({success: true})))
+        .catch(err => res.status(404).json({success: false}));
+});
+
 
 module.exports = router;
