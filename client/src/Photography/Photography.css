@@ -14,24 +14,6 @@
     margin-top: 5vh;
 }
 
-    @media screen and (max-width: 1200px) {
-        .image-container {
-            margin-top: 5vh;
-        }
-    }
-
-    @media screen and (max-width: 840px) {
-        .image-container {
-            margin-top: 7vh;
-        }
-    }
-    
-    @media screen and (max-width: 680px) {
-        .image-container {
-            margin-top: 9vh;
-        }
-    }
-
     .image-container img {
         -webkit-box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.5); 
         box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.5);
@@ -43,79 +25,115 @@
         /* border: 3px solid white; */
     }
 
-        @media screen and (max-width: 680px) {
-            .image-container img {
-                max-height: 480px;
-            }
+        #main-image-box:hover > #main-image {
+            filter:brightness(30%);
+            transition: 0.5s ease all;
         }
 
-        #image-location {
-            margin-left: 7vw;
-            font-size: 18px;
-            letter-spacing: .5em;
-            padding-bottom: 15px;
-            font-family: 'Cinzel', serif;
-            background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            width: fit-content;
+        #main-image-box:hover > #add-pack-button img {
+            opacity: 1;
+            transition: 0.5s ease all;
         }
 
-            @media screen and (max-width: 680px) {
-                #image-location {
-                    margin-left: 11vw;
-                    font-size: 14px;
-                }
-            }
 
-    .trapezoid {
-        border-bottom: 50px solid;
-        border-color: #F2F2F2;
-        border-left: 55px solid transparent;
-        border-right: 55px solid transparent;
-        height: 0;
+    #image-location {
+        margin-left: 7vw;
+        font-size: 18px;
+        letter-spacing: .5em;
+        padding-bottom: 15px;
+        font-family: 'Cinzel', serif;
+        background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: fit-content;
+    }
+
+    #add-pack-button img {
         position: absolute;
-        transform: translateY(3vh);
-        box-shadow: 0 13px 15px -12px rgb(155, 154, 154);
+        bottom: calc(50% - 60px);
+        left: calc(50% - 30px);
+        height: 80px;
+        width: 80px;
+        -webkit-box-shadow: none; 
+        box-shadow: none;
+        opacity: 0;
+        transition: 0.5s ease all;
     }
 
-        @media screen and (max-width: 680px) {
-            .trapezoid {
-                transform: translateY(3.6vh)
-            }
-        }
+.trapezoid {
+    border-bottom: 50px solid;
+    border-color: #F2F2F2;
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    height: 0;
+    position: absolute;
+    transform: translateY(3vh);
+    box-shadow: 0 13px 15px -12px rgb(155, 154, 154);
+}
 
-    .scrolling-wrapper {
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        margin-top: 6vh;
-        padding: 0;
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-top: 6vh;
+    padding: 0;
+}
+
+    .scrolling-wrapper .card {
+        display: inline-block;
+        width: 9vh;
+        height: 7vh;
+        margin: 15px 5px;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 3px;
     }
 
-        @media screen and (min-width: 680px) {
-            .scrolling-wrapper {
-                margin-top: 4vh;
-            }
+        .scrolling-wrapper .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 13px 15px -12px rgb(87, 87, 87);
         }
 
-        .scrolling-wrapper .card {
-            display: inline-block;
-            width: 9vh;
-            height: 7vh;
-            margin: 15px 5px;
-            margin-bottom: 30px;
-            border: none;
+        .card img {
+            height: 100%;
+            width: 100%;
             border-radius: 3px;
         }
 
-            .scrolling-wrapper .card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 13px 15px -12px rgb(87, 87, 87);
-            }
 
-            .card img {
-                height: 100%;
-                width: 100%;
-                border-radius: 3px;
-            }
+@media screen and (min-width: 680px) {    
+    .scrolling-wrapper {
+        margin-top: 4vh;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .image-container {
+        margin-top: 9vh;
+    }
+
+    .image-container img {
+        max-height: 480px;
+    }
+
+    #image-location {
+        margin-left: 11vw;
+        font-size: 14px;
+    }
+    
+    .trapezoid {
+        transform: translateY(3.6vh)
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .image-container {
+        margin-top: 5vh;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .image-container {
+        margin-top: 7vh;
+    }
+}

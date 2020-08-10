@@ -13,7 +13,10 @@ export default class Photography extends React.Component {
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
                         <div id="image-location">California</div>
-                        <img src="photographyPhotos/Onion_Valley_MilkyWay.jpg" alt="" class="img-fluid mx-auto d-block"/>
+                        <a href="/pack"><div id="main-image-box">
+                            <img src="photographyPhotos/Glen_Pass_Tent_MilkyWay.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
+                            <div id="add-pack-button" class="container-fluid"><img src="/icons/plusSign.svg" alt=""/></div>
+                        </div></a>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center">
@@ -48,6 +51,7 @@ export default class Photography extends React.Component {
                         <div class="card"><img src="photographyPhotos/Kearsarge_Lakes_Sunrise.jpg" alt=""/></div>
                     </div>
                 </div>
+
             </div>
         );
     }
