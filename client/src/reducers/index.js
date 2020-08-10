@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import addPackReducer from './addPackReducer';
+import addPackReducer from './addPackItemReducer';
 
 export default combineReducers({
     packItem: addPackReducer

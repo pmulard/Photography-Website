@@ -12,9 +12,10 @@ export default function(state = initialState, action) {
     // payload. (Can call payload whatever you want)
     switch(action.type) {
         case ADD_PACK_ITEM:
+            console.log('*** ADD_PACK_ITEM reducer executed ***')
             return {
                 ...state,
-                items: action.payload
+                item: action.payload
             }
         default:
             return state;

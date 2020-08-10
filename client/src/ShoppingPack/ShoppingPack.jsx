@@ -2,14 +2,13 @@ import React from 'react';
 import './ShoppingPack.css';
 import NavBar from '../NavBar/NavBar';
 
-export default class ShoppingPack extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+import { connect } from 'react-redux';
+import { addPackItem } from '../actions/addPackItemActions';
 
-    // When app loads for the first time
+class ShoppingPack extends React.Component {
+
     componentDidMount() {
-    
+        this.props.addPackItem();
     }
 
     render() {
@@ -139,5 +138,6 @@ export default class ShoppingPack extends React.Component {
             </div>
         );
     }
-
 }
+
+export default connect(null, { addPackItem })(ShoppingPack);
