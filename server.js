@@ -48,15 +48,15 @@ app.get('/api/packItems', (req, res) => {
     const packItems = [
         {
             id: '444',
-            url: 'Glen_Pass_MilkyWay.jpg',
-            size: '16x24',
+            url: 'photographyPhotos/Onion_Valley_MilkyWay.jpg',
+            size: '16"x24"',
             price: 28.00,
             quantity: 2
         },
         {
             id: '555',
-            url: 'Fossile_Lake.jpg',
-            size: '8x12',
+            url: 'photographyPhotos/Fossile_Lake.jpg',
+            size: '8"x12"',
             price: 16.00,
             quantity: 1
         }

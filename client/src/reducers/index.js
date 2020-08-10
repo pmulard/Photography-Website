@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import addPackReducer from './addPackItemReducer';
+import addPackItemReducer from './addPackItemReducer';
 
 export default combineReducers({
-    packItem: addPackReducer
+    packItems: addPackItemReducer
 })

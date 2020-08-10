@@ -13,9 +13,10 @@ export default function(state = initialState, action) {
     switch(action.type) {
         case ADD_PACK_ITEM:
             console.log('*** ADD_PACK_ITEM reducer executed ***')
+            //returns state with items that have been fetched
             return {
                 ...state,
-                item: action.payload
+                packItems: action.payload
             }
         default:
             return state;
