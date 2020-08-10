@@ -14,7 +14,7 @@ export default class Photography extends React.Component {
                     <div class="image-container col-10 col-md-8 col-lg-6">
                         <div id="image-location">California</div>
                         <a href="/pack"><div id="main-image-box">
-                            <img src="photographyPhotos/Glen_Pass_Tent_MilkyWay.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
+                            <img src="photographyPhotos/Sky_Top_Lakes.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
                             <div id="add-pack-button" class="container-fluid"><img src="/icons/plusSign.svg" alt=""/></div>
                         </div></a>
                     </div>
