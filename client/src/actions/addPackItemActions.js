@@ -11,3 +11,10 @@ export const addPackItem = () => dispatch => {
         })
     );
 }
+
+export const createPackItem = (packItem) => dispatch => {
+    console.log('creating new packItem...');
+    fetch('./api/packItems', {
+        method: 'POST'
+    })
+}
