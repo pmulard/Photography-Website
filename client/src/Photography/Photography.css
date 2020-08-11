@@ -148,3 +148,26 @@
         margin-top: 7vh;
     }
 }
+
+
+
+thead th {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+tbody td {
+    border-bottom: 1px solid black;
+}
+
+#formAddToPack {
+    margin-bottom: 0;
+}
+
+    #addToPackModalButton {
+        width: 100%;
+        padding: 7.5px 0;
+        margin-top: 35px;
+        border-color: white;
+        background: -webkit-linear-gradient(360deg, hsl(280, 36%, 62%),hsl(209, 59%, 70%), hsl(181, 36%, 62%));
+    }

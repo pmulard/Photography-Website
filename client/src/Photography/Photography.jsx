@@ -1,32 +1,74 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Photography.css';
 import NavBar from '../NavBar/NavBar';
-import { Modal, Button }from 'react-bootstrap';
+import { Modal, Button, Form, Col, Table }from 'react-bootstrap';
 
 function MyVerticallyCenteredModal(props) {
     return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Modal heading
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
+        <Modal
+            {...props}
+            size="md"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    Prints
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Col xs={8}>
+                <Table borderless hover size="sm">
+                    <thead>
+                        <tr>
+                        <th>Size (in)</th>
+                        <th>Price (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>8"x12"</td>
+                        <td>$28.00</td>
+                        </tr>
+                        <tr>
+                        <td>16"x24"</td>
+                        <td>$42.00</td>
+                        </tr>
+                        <tr>
+                        <td>24"x32"</td>
+                        <td>$56.00</td>
+                        </tr>
+                    </tbody>
+                </Table>
+                </Col>
+            </Modal.Body>
+            <Modal.Footer>
+                <Form>
+                    <Form.Row>
+                        <Col xs={4}>
+                            <Form.Group controlId="formPrintSize">
+                                <Form.Label>Size</Form.Label>
+                                <Form.Control as="select" defaultValue="Select">
+                                    <option>8"x12"</option>
+                                    <option>16"x24"</option>
+                                    <option>24"x32"</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Col>
+                        <Col xs={3}>
+                            <Form.Group controlId="formPrintQuantity">
+                                <Form.Label>Quantity</Form.Label>
+                                <Form.Control type="number" defaultValue={1} min={1}></Form.Control>
+                            </Form.Group>
+                        </Col>
+                        <Col xs={5}>
+                            <Form.Group controlId="formAddToPack">
+                                <Button variant="primary" type="submit" id="addToPackModalButton">Add to pack</Button>
+                            </Form.Group>
+                        </Col>
+                    </Form.Row>
+                </Form>
+            </Modal.Footer>
       </Modal>
     );
 }
@@ -37,7 +79,7 @@ export default class Photography extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          modalShow: true,
+          modalShow: false,
           setModalShow: false
         }
     }
