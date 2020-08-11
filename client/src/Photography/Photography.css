@@ -34,7 +34,16 @@
             opacity: 1;
             transition: 0.5s ease all;
         }
+    
+    #ADD-PACK-BUTTON {
+        background-color: white;
+        border: none;
+    }
 
+        #ADD-PACK-BUTTON:focus, #ADD-PACK-BUTTON:active {
+            outline: none;
+            box-shadow: none;
+        }
 
     #image-location {
         margin-left: 7vw;
@@ -44,6 +53,7 @@
         font-family: 'Cinzel', serif;
         background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         width: fit-content;
     }
