@@ -10,12 +10,19 @@ export default class Photography extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          modalShow: false,
-          setModalShow: false,
-          size: '',
-          quantity: 0,
-          price: 0
-        }
+            modalShow: false,
+            setModalShow: false,
+            size: '',
+            quantity: 1,
+            price: 0,
+            sizesPrices: {
+                    '8"x12"': 28.00,
+                    '16"x24"': 42.00,
+                    '24"x32"': 56.00
+            }
+        };
+
+        this.onChange = this.onChange.bind(this);
     }
 
     modalShow = () => {
@@ -27,7 +34,11 @@ export default class Photography extends React.Component {
     }
 
     onChange = (e) => {
-                this.setState({ input: e.target.value });
+        e.preventDefault();
+        this.setState({ [e.target.name]: e.target.value });
+        if (e.target.name === 'size') {
+            this.setPriceState(e.target.value);
+        }
     }
         
     
@@ -80,7 +91,7 @@ export default class Photography extends React.Component {
                                 <Col xs={4} id="sizeColumn">
                                     <Form.Group controlId="formPrintSize">
                                         <Form.Label>Size</Form.Label>
-                                        <Form.Control as="select" defaultValue="">
+                                        <Form.Control as="select" value={this.state.size} name="size" onChange={this.onChange}>
                                             <option>8"x12"</option>
                                             <option>16"x24"</option>
                                             <option>24"x32"</option>
@@ -90,7 +101,7 @@ export default class Photography extends React.Component {
                                 <Col xs={2}>
                                     <Form.Group controlId="formPrintQuantity">
                                         <Form.Label>Qty</Form.Label>
-                                        <Form.Control type="number" value={this.state.quantity} min={1} onChange={this.onChange}></Form.Control>
+                                        <Form.Control type="number" value={this.state.quantity} min={1} name="quantity" onChange={this.onChange}></Form.Control>
                                     </Form.Group>
                                 </Col>
                                 <Col xs={1}></Col>
@@ -146,6 +157,12 @@ export default class Photography extends React.Component {
                 </div>
             </div>
         );
+    }
+
+
+    setPriceState = (size) => {
+        const price = this.state.sizesPrices[size];
+        this.setState({ 'price': price });
     }
 
 }
