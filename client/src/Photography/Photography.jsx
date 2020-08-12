@@ -3,75 +3,6 @@ import './Photography.css';
 import NavBar from '../NavBar/NavBar';
 import { Modal, Button, Form, Col, Table }from 'react-bootstrap';
 
-function MyVerticallyCenteredModal(props) {
-    return (
-        <Modal modalClassName="modalContainer"
-            {...props}
-            size="md"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-        >
-            <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    Prints
-                </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Col xs={8}>
-                <Table borderless hover size="sm">
-                    <thead>
-                        <tr>
-                        <th>Size (in)</th>
-                        <th>Price (USD)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                        <td>8"x12"</td>
-                        <td>$28.00</td>
-                        </tr>
-                        <tr>
-                        <td>16"x24"</td>
-                        <td>$42.00</td>
-                        </tr>
-                        <tr>
-                        <td>24"x32"</td>
-                        <td>$56.00</td>
-                        </tr>
-                    </tbody>
-                </Table>
-                </Col>
-                <hr></hr>
-                <Form>
-                    <Form.Row>
-                        <Col xs={4} id="sizeColumn">
-                            <Form.Group controlId="formPrintSize">
-                                <Form.Label>Size</Form.Label>
-                                <Form.Control as="select" defaultValue="">
-                                    <option>8"x12"</option>
-                                    <option>16"x24"</option>
-                                    <option>24"x32"</option>
-                                </Form.Control>
-                            </Form.Group>
-                        </Col>
-                        <Col xs={2}>
-                            <Form.Group controlId="formPrintQuantity">
-                                <Form.Label>Qty</Form.Label>
-                                <Form.Control type="number" defaultValue={1} min={1}></Form.Control>
-                            </Form.Group>
-                        </Col>
-                        <Col xs={1}></Col>
-                        <Col xs={5}>
-                            <Form.Group controlId="formAddToPack">
-                                <Button variant="primary" type="submit" id="addToPackModalButton">Add to pack</Button>
-                            </Form.Group>
-                        </Col>
-                    </Form.Row>
-                </Form>
-            </Modal.Body>
-      </Modal>
-    );
-}
 
 export default class Photography extends React.Component {
     
@@ -80,7 +11,10 @@ export default class Photography extends React.Component {
         super(props);
         this.state = {
           modalShow: false,
-          setModalShow: false
+          setModalShow: false,
+          size: '',
+          quantity: 0,
+          price: 0
         }
     }
 
@@ -91,6 +25,11 @@ export default class Photography extends React.Component {
     modalHide = () => {
         this.setState({modalShow: false});
     }
+
+    onChange = (e) => {
+                this.setState({ input: e.target.value });
+    }
+        
     
     render() {
         return (
@@ -98,10 +37,72 @@ export default class Photography extends React.Component {
                 <div class="row justify-content-center align-items-center" id="navbar-row">
                     <NavBar/>
                 </div>
-                <MyVerticallyCenteredModal
+                <Modal modalClassName="modalContainer"
+                    size="md"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
                     show={this.state.modalShow}
                     onHide={this.modalHide}
-                />
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="contained-modal-title-vcenter">
+                            Prints
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <Col xs={8}>
+                        <Table borderless hover size="sm">
+                            <thead>
+                                <tr>
+                                <th>Size (in)</th>
+                                <th>Price (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>8"x12"</td>
+                                <td>$28.00</td>
+                                </tr>
+                                <tr>
+                                <td>16"x24"</td>
+                                <td>$42.00</td>
+                                </tr>
+                                <tr>
+                                <td>24"x32"</td>
+                                <td>$56.00</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                        </Col>
+                        <hr></hr>
+                        <Form>
+                            <Form.Row>
+                                <Col xs={4} id="sizeColumn">
+                                    <Form.Group controlId="formPrintSize">
+                                        <Form.Label>Size</Form.Label>
+                                        <Form.Control as="select" defaultValue="">
+                                            <option>8"x12"</option>
+                                            <option>16"x24"</option>
+                                            <option>24"x32"</option>
+                                        </Form.Control>
+                                    </Form.Group>
+                                </Col>
+                                <Col xs={2}>
+                                    <Form.Group controlId="formPrintQuantity">
+                                        <Form.Label>Qty</Form.Label>
+                                        <Form.Control type="number" value={this.state.quantity} min={1} onChange={this.onChange}></Form.Control>
+                                    </Form.Group>
+                                </Col>
+                                <Col xs={1}></Col>
+                                <Col xs={5}>
+                                    <Form.Group controlId="formAddToPack">
+                                        <Button variant="primary" type="submit" id="addToPackModalButton">Add to pack</Button>
+                                    </Form.Group>
+                                </Col>
+                            </Form.Row>
+                        </Form>
+                    </Modal.Body>
+                </Modal>
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
                         <div id="image-location">California</div>
