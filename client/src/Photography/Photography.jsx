@@ -3,26 +3,30 @@ import './Photography.css';
 import NavBar from '../NavBar/NavBar';
 import { Modal, Button, Form, Col, Table }from 'react-bootstrap';
 
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createPackItem } from '../actions/addPackItemActions';
 
-export default class Photography extends React.Component {
+class Photography extends React.Component {
     
     // const [modalShow, setModalShow] = React.useState(false);
     constructor(props) {
         super(props);
         this.state = {
             modalShow: false,
-            setModalShow: false,
-            size: '',
-            quantity: 1,
-            price: 0,
             sizesPrices: {
-                    '8"x12"': 28.00,
-                    '16"x24"': 42.00,
-                    '24"x32"': 56.00
-            }
+                '8"x12"': 28.00,
+                '16"x24"': 42.00,
+                '24"x32"': 56.00
+            },
+            url: 'Onion_Valley_MilkyWay.jpg',
+            size: '8"x12"',
+            price: 28.00,
+            quantity: 1
         };
 
         this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     modalShow = () => {
@@ -35,13 +39,27 @@ export default class Photography extends React.Component {
 
     onChange = (e) => {
         e.preventDefault();
+
         this.setState({ [e.target.name]: e.target.value });
         if (e.target.name === 'size') {
             this.setPriceState(e.target.value);
         }
     }
         
-    
+    onSubmit = (e) => {
+        e.preventDefault();
+
+        const packItem = {
+            url: this.state.url,
+            size: this.state.size,
+            price: this.state.price,
+            quantity: this.state.quantity
+        }
+
+        this.props.createPackItem(packItem);
+    }
+
+
     render() {
         return (
             <div class="container-fluid" id="max-container">
@@ -80,7 +98,7 @@ export default class Photography extends React.Component {
                         </Table>
                         </Col>
                         <hr></hr>
-                        <Form>
+                        <Form onSubmit={this.onSubmit}>
                             <Form.Row>
                                 <Col xs={4} id="sizeColumn">
                                     <Form.Group controlId="formPrintSize">
@@ -160,3 +178,9 @@ export default class Photography extends React.Component {
     }
 
 }
+
+Photography.propTypes = {
+    createPackItem: PropTypes.func.isRequired
+}
+
+export default connect(null, { createPackItem })(Photography);

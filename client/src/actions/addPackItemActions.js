@@ -1,4 +1,4 @@
-import { ADD_PACK_ITEM } from './types';
+import { ADD_PACK_ITEM, CREATE_PACK_ITEM } from './types';
 
 export const addPackItem = () => dispatch => {
     console.log('fetching packItems...');
@@ -8,13 +8,21 @@ export const addPackItem = () => dispatch => {
         .then(packItems => dispatch({
             type: ADD_PACK_ITEM,
             payload: packItems
-        })
-    );
+        }));
 }
 
-export const createPackItem = (packItem) => dispatch => {
+export const createPackItem = (packItemData) => dispatch => {
     console.log('creating new packItem...');
     fetch('./api/packItems', {
-        method: 'POST'
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(packItemData)
     })
+        .then(res => res.json())
+        .then(packItem => dispatch({
+            type: CREATE_PACK_ITEM,
+            payload: packItem
+        }));
 }

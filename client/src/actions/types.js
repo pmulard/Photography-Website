@@ -1,1 +1,2 @@
 export const ADD_PACK_ITEM = 'ADD_PACK_ITEM';
+export const CREATE_PACK_ITEM = 'CREATE_PACK_ITEM';

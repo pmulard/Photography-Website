@@ -1,4 +1,4 @@
-import { ADD_PACK_ITEM } from '../actions/types.js';
+import { ADD_PACK_ITEM, CREATE_PACK_ITEM } from '../actions/types.js';
 
 // Pack Items that come from actions
 const initialState = {
@@ -17,7 +17,15 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 packItems: action.payload
-            }
+            };
+        case CREATE_PACK_ITEM:
+            console.log('*** CREATE_PACK_ITEM reducer executed ***')
+            //returns state with items that have been fetched
+            return {
+                // Just updates the state - need to add code for updating database
+                ...state,
+                packItem: action.payload
+            };
         default:
             return state;
     }
