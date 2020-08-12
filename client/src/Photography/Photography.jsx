@@ -87,9 +87,14 @@ class Photography extends React.Component {
                         <Table borderless hover size="sm">
                             <thead>
                                 <tr>
-                                <th>Size (in)</th>
-                                <th>Price (USD)</th>
-                                </tr>
+                                <th>
+                                    <span class="thName">Size</span>
+                                    <span class="thUnit">(in)</span>
+                                </th>
+                                <th>
+                                    <span class="thName">Price</span>
+                                    <span class="thUnit">(USD)</span>
+                                </th>                                </tr>
                             </thead>
                             <tbody>
                                 {Object.keys(this.state.sizesPrices).map((size) => (
