@@ -5,7 +5,7 @@ import { Modal, Button, Form, Col, Table }from 'react-bootstrap';
 
 function MyVerticallyCenteredModal(props) {
     return (
-        <Modal
+        <Modal modalClassName="modalContainer"
             {...props}
             size="md"
             aria-labelledby="contained-modal-title-vcenter"
@@ -41,26 +41,26 @@ function MyVerticallyCenteredModal(props) {
                     </tbody>
                 </Table>
                 </Col>
-            </Modal.Body>
-            <Modal.Footer>
+                <hr></hr>
                 <Form>
                     <Form.Row>
-                        <Col xs={4}>
+                        <Col xs={4} id="sizeColumn">
                             <Form.Group controlId="formPrintSize">
                                 <Form.Label>Size</Form.Label>
-                                <Form.Control as="select" defaultValue="Select">
+                                <Form.Control as="select" defaultValue="">
                                     <option>8"x12"</option>
                                     <option>16"x24"</option>
                                     <option>24"x32"</option>
                                 </Form.Control>
                             </Form.Group>
                         </Col>
-                        <Col xs={3}>
+                        <Col xs={2}>
                             <Form.Group controlId="formPrintQuantity">
-                                <Form.Label>Quantity</Form.Label>
+                                <Form.Label>Qty</Form.Label>
                                 <Form.Control type="number" defaultValue={1} min={1}></Form.Control>
                             </Form.Group>
                         </Col>
+                        <Col xs={1}></Col>
                         <Col xs={5}>
                             <Form.Group controlId="formAddToPack">
                                 <Button variant="primary" type="submit" id="addToPackModalButton">Add to pack</Button>
@@ -68,7 +68,7 @@ function MyVerticallyCenteredModal(props) {
                         </Col>
                     </Form.Row>
                 </Form>
-            </Modal.Footer>
+            </Modal.Body>
       </Modal>
     );
 }

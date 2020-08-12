@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith&display=swap');
 
 * {
     transition: ease all 1s;
@@ -151,23 +152,57 @@
 
 
 
-thead th {
-    font-weight: bold;
-    border-bottom: 1px solid black;
+.modal-header {
+    background-image: -webkit-linear-gradient(360deg, hsl(280, 36%, 77%),hsl(209, 59%, 85%), hsl(181, 36%, 77%));
+    background-position: bottom;
+    background-size: 100% 2px;
+    background-repeat: repeat-x;
+    border: none;
 }
 
-tbody td {
-    border-bottom: 1px solid black;
+hr {
+    width: 97%;
 }
+
+.modal-title, th, td, .form-label, .form-control, .form-group button, .form-control option {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+}
+
+td, .form-control, .form-control option {
+    font-family: 'Thasadith', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+th, .form-label, .form-group button {
+    font-size: 16px;
+}
+
+.modal-body {
+    margin: 0 1vw;
+}
+
+    .modal-body .col-8 {
+        padding-left: 0px;
+    }
 
 #formAddToPack {
     margin-bottom: 0;
 }
 
     #addToPackModalButton {
-        width: 100%;
-        padding: 7.5px 0;
-        margin-top: 35px;
-        border-color: white;
-        background: -webkit-linear-gradient(360deg, hsl(280, 36%, 62%),hsl(209, 59%, 70%), hsl(181, 36%, 62%));
+        position: absolute;
+        bottom: 19%;
+        right: 5px;
+        width: 85%;
+        padding: 7px 0;
+        border: 1px solid;
+        border-image-source: linear-gradient(90deg, hsl(280, 36%, 72%),hsl(209, 59%, 80%), hsl(181, 36%, 72%));
+        border-image-slice: 1;
+        background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 16px;
     }
