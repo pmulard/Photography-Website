@@ -4,12 +4,12 @@ import './ShoppingPack.css';
 import NavBar from '../NavBar/NavBar';
 
 import { connect } from 'react-redux';
-import { addPackItem } from '../actions/addPackItemActions';
+import { getPackItems } from '../actions/packItemsActions';
 
 class ShoppingPack extends React.Component {
 
     componentDidMount() {
-        this.props.addPackItem();
+        this.props.getPackItems();
     }
 
     render() {
@@ -91,7 +91,7 @@ class ShoppingPack extends React.Component {
 
 //Add props to proptypes
 ShoppingPack.propTypes = {
-    addPackItem: PropTypes.func.isRequired,
+    getPackItems: PropTypes.func.isRequired,
     packItems: PropTypes.array.isRequired
 }
 
@@ -102,4 +102,4 @@ const mapStateToProps = state => ({
     packItems: state.packItems.packItems
 });
 
-export default connect(mapStateToProps, { addPackItem })(ShoppingPack);
+export default connect(mapStateToProps, { getPackItems })(ShoppingPack);

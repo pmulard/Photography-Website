@@ -5,8 +5,7 @@ import { Modal, Button, Form, Col, Table }from 'react-bootstrap';
 
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createPackItem } from '../actions/addPackItemActions';
-import { addPackItem } from '../actions/addPackItemActions';
+import { createPackItem, getPackItems } from '../actions/packItemsActions';
 
 class Photography extends React.Component {
     
@@ -31,7 +30,7 @@ class Photography extends React.Component {
     }
 
     componentDidMount() {
-        this.props.addPackItem();
+        this.props.getPackItems();
     }
 
     modalShow = () => {
@@ -187,14 +186,14 @@ class Photography extends React.Component {
 // Get items from redux state and map to properties of the component
 const mapStateToProps = state => ({
     // 2nd packItems matches with reducer key in index.js
-    // 3rd packItems is from payload ID in the reducer (addPackItemReducer.js)
+    // 3rd packItems is from payload ID in the reducer (packItemsReducer.js)
     packItems: state.packItems.packItems
 });
 
 Photography.propTypes = {
     createPackItem: PropTypes.func.isRequired,
-    addPackItem: PropTypes.func.isRequired,
+    getPackItems: PropTypes.func.isRequired,
     packItems: PropTypes.array.isRequired
 }
 
-export default connect(mapStateToProps, { createPackItem, addPackItem })(Photography);
+export default connect(mapStateToProps, { createPackItem, getPackItems })(Photography);

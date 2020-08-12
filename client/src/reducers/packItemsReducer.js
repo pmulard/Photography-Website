@@ -1,4 +1,4 @@
-import { ADD_PACK_ITEM, CREATE_PACK_ITEM } from '../actions/types.js';
+import { GET_PACK_ITEMS, CREATE_PACK_ITEM } from '../actions/types.js';
 
 // Pack Items that come from actions
 const initialState = {
@@ -11,7 +11,7 @@ export default function(state = initialState, action) {
     // Looks at addPackItemActions.js for type, then matches
     // payload. (Can call payload whatever you want)
     switch(action.type) {
-        case ADD_PACK_ITEM:
+        case GET_PACK_ITEMS:
             console.log('*** ADD_PACK_ITEM reducer executed ***')
             //returns state with items that have been fetched
             return {

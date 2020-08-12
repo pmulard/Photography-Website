@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import addPackItemReducer from './addPackItemReducer';
+import packItemsReducer from './packItemsReducer';
 // import getPhotoInfoReducer from './getPhotoInfoReducer';
 
 export default combineReducers({
-    packItems: addPackItemReducer,
+    packItems: packItemsReducer,
 })
