@@ -70,18 +70,12 @@ export default class Photography extends React.Component {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                <td>8"x12"</td>
-                                <td>$28.00</td>
-                                </tr>
-                                <tr>
-                                <td>16"x24"</td>
-                                <td>$42.00</td>
-                                </tr>
-                                <tr>
-                                <td>24"x32"</td>
-                                <td>$56.00</td>
-                                </tr>
+                                {Object.keys(this.state.sizesPrices).map((size) => (
+                                    <tr>
+                                        <td>{size}</td>
+                                        <td>${this.state.sizesPrices[size].toFixed(2)}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </Table>
                         </Col>
@@ -92,9 +86,9 @@ export default class Photography extends React.Component {
                                     <Form.Group controlId="formPrintSize">
                                         <Form.Label>Size</Form.Label>
                                         <Form.Control as="select" value={this.state.size} name="size" onChange={this.onChange}>
-                                            <option>8"x12"</option>
-                                            <option>16"x24"</option>
-                                            <option>24"x32"</option>
+                                            {Object.keys(this.state.sizesPrices).map((size) => (
+                                                <option>{size}</option>
+                                            ))}
                                         </Form.Control>
                                     </Form.Group>
                                 </Col>
