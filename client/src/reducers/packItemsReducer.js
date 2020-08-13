@@ -13,24 +13,22 @@ export default function(state = initialState, action) {
     switch(action.type) {
         case GET_PACK_ITEMS:
             console.log('GET_PACK_ITEMS reducer executed.')
-            //returns state with items that have been fetched
+            // Returns state with items that have been fetched
+            // Just updates state. Need to add functionality for updating database
             return {
-                ...state,
-                packItems: action.payload
+                // Use spread operator because we can't directly change state
+                // Need to make a copy of it
+                ...state
             };
         case CREATE_PACK_ITEM:
             console.log('CREATE_PACK_ITEM reducer executed.')
-            //returns state with items that have been fetched
             return {
-                // Just updates the state - need to add code for updating database
                 ...state,
-                packItem: action.payload
+                packItems: [action.payload, ...state.packItems]
             };
         case DELETE_PACK_ITEM:
             console.log('DELETE_PACK_ITEM reducer executed.')
-            //returns state with items that have been fetched
             return {
-                // Just updates the state - need to add code for updating database
                 ...state,
                 packItems: state.packItems.filter(packItem => packItem.url !== action.payload)
             };

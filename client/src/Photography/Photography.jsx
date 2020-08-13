@@ -30,7 +30,6 @@ class Photography extends React.Component {
 
     componentDidMount() {
         this.props.getPackItems();
-        this.props.createPackItem();
     }
 
     modalShow = () => {
@@ -139,7 +138,7 @@ class Photography extends React.Component {
                     <div class="image-container col-10 col-md-8 col-lg-6">
                         <div id="image-location">California</div>
                         <Button variant="primary" onClick={this.modalShow} id="ADD-PACK-BUTTON"><div id="main-image-box">
-                            <img src="photographyPhotos/Sky_Top_Lakes.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
+                            <img src="photographyPhotos/Onion_Valley_MilkyWay.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
                             <div id="add-pack-button" class="container-fluid"><img src="/icons/plusSign.svg" alt=""/></div>
                         </div></Button>
                     </div>
@@ -154,7 +153,7 @@ class Photography extends React.Component {
                         <div class="card"><img src="photographyPhotos/Fish_Bowl_Sunset.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Cape_Flattery_Sunset.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Lake_Louise_Panorama.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Beartooths_Wildflowers_Creek.jpg" alt=""/></div>
+                        {/* <div class="card"><img src="photographyPhotos/Beartooths_Wildflowers_Creek.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Beartooth_Peak.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Fossile_Lake.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Granite_Peak.jpg" alt=""/></div>
@@ -173,7 +172,7 @@ class Photography extends React.Component {
                         <div class="card"><img src="photographyPhotos/Glen_Pass_Tent_MilkyWay.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Rae_Lakes_Sunset.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Kearsarge_Lakes_MilkyWay.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Kearsarge_Lakes_Sunrise.jpg" alt=""/></div>
+                        <div class="card"><img src="photographyPhotos/Kearsarge_Lakes_Sunrise.jpg" alt=""/></div> */}
                     </div>
                 </div>
             </div>
