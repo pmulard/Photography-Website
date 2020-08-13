@@ -33,7 +33,7 @@ export default function(state = initialState, action) {
             console.log('DELETE_PACK_ITEM reducer executed.')
             return {
                 ...state,
-                packItems: state.packItems.filter(packItem => packItem.url !== action.payload)
+                packItems: state.packItems.filter(packItem => packItem._id !== action.payload)
             };
         case LOADING_PACK_ITEMS:
             return {

@@ -3,9 +3,9 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const ItemSchema = new Schema({
-    id: {
+    _id: {
         type: String,
-        required: true
+        required: false
     },
     url: {
         type: String,

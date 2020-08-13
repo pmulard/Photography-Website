@@ -25,11 +25,10 @@ app.use('./routes/api/photoItems', photoItems);
 app.use('./routes/api/packItems', packItems);
 
 // Sets local port
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Starts server on local port
 app.listen(port, () => console.log(`Server started on port ${port}`));
-
 
 
 // GET from db and serve @ localhost:5000/api/photoInfo
@@ -47,14 +46,14 @@ app.get('/api/photoItems', (req, res) => {
 app.get('/api/packItems', (req, res) => {
     const packItems = [
         {
-            id: '444',
+            _id: '444',
             url: 'photographyPhotos/Onion_Valley_MilkyWay.jpg',
             size: '16"x24"',
             price: 28.00,
             quantity: 2
         },
         {
-            id: '555',
+            _id: '555',
             url: 'photographyPhotos/Fossile_Lake.jpg',
             size: '8"x12"',
             price: 16.00,

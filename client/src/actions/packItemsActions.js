@@ -10,23 +10,32 @@ export const getPackItems = () => dispatch => {
             dispatch({
                 type: GET_PACK_ITEMS,
                 payload: res.data
-            }))
+            })
+        )
 }
 
-export const createPackItem = (packItem) => {
+export const createPackItem = (packItem) => dispatch => {
     console.log('creating packItem...');
-    return {
-        type: CREATE_PACK_ITEM,
-        payload: packItem
-    }
+    axios
+        .post('/api/packItems', packItem)
+        .then(res => 
+            dispatch({
+                type: CREATE_PACK_ITEM,
+                payload: res.data
+            })
+        )
 }
 
-export const deletePackItem = (url) => {
+export const deletePackItem = (id) => dispatch => {
     console.log('deleting packItem...');
-    return {
-        type: DELETE_PACK_ITEM,
-        payload: url
-    }
+    axios
+        .delete(`/api/packItems/:${id}`)
+        .then(res => {
+            dispatch({
+                type: DELETE_PACK_ITEM,
+                payload: id
+            })
+        })
 }
 
 export const setPackItemsLoading = () => {

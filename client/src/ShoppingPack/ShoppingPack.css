@@ -53,6 +53,7 @@
     border-radius: 10px;
     align-content: center;
     position: relative;
+    transition: all 1s linear;
 }
 
     .photo-item-img-container {

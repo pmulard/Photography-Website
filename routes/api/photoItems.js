@@ -34,7 +34,7 @@ router.post('/', (req, res) => {
 // @route   DELETE api/photoItems/:id
 // @desc    Delete photo item from database
 // @access  Public
-router.post('/:id', (req, res) => {
+router.delete('/:url', (req, res) => {
     PhotoItem.findById(req.params.id)
         .then(item => item.remove().then(() => restart.json({success: true})))
         .catch(err => res.status(404).json({success: false}));

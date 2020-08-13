@@ -10,15 +10,14 @@ class ShoppingPack extends React.Component {
 
     componentDidMount() {
         this.props.getPackItems();
-        this.props.deletePackItem();
     }
 
     render() {
 
         const packItems = this.props.packItems.map(packItem => (
-            <div class="photo-item row">
+            <div class="photo-item row" key={packItem._id}>
                 <div class="photo-item-img-container col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <img src={packItem.url} alt={packItem.id}/>
+                    <img src={packItem.url} alt={packItem._id}/>
                 </div>
                 <div class="photo-item-info-container col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 ">
                     <div class="photo-item-info-box row"> 
@@ -48,7 +47,7 @@ class ShoppingPack extends React.Component {
                     type="button" 
                     class="remove-button btn btn-outline-danger col-1" 
                     onClick={() => {
-                        this.props.deletePackItem(packItem.url);
+                        this.props.deletePackItem(packItem._id);
                     }}
                 >x</button>
             </div>
