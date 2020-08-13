@@ -66,7 +66,7 @@ class ShoppingPack extends React.Component {
                         <div class="row justify-content-center align-items-center">
                             <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7" id="pack-header-container">
                                 <div class="pack-header">You currently have {numberOfPrints} print(s) in your pack.</div>
-                                <div id="pack-description">Continue browsing. Or checkout your order below.</div>
+                                <div id="pack-description">Browse more photos. Or checkout below.</div>
                                 <div id="continue-shopping-button">
                                     <a href="/">Continue Shopping</a>
                                 </div>

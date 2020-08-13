@@ -80,8 +80,12 @@
         padding: 0;
         border: none;
         border-radius: 1px 10px 1px 10px;
-        
     }
+
+        .btn:focus,.btn:active {
+            outline: none;
+            box-shadow: none;
+        }
     
     .photo-item-info-container {
         padding: 1vw 2vw 1vw 2vw;
