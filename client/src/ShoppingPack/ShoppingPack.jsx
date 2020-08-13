@@ -54,43 +54,67 @@ class ShoppingPack extends React.Component {
             </div>
         ));
 
+        const packShowAndHeaderInfo = () => {
+            // At least one pack item to display
+            const numberOfPrints = this.props.packItems.reduce((total, packItem) => {
+                return total + packItem.quantity
+            }, 0);
+
+            if (this.props.packItems.length > 0) {
+                return (
+                    <div>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7" id="pack-header-container">
+                                <div class="pack-header">You currently have {numberOfPrints} print(s) in your pack.</div>
+                                <div id="pack-description">Continue browsing. Or checkout your order below.</div>
+                                <div id="continue-shopping-button">
+                                    <a href="/">Continue Shopping</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7" id="pack-container">
+                                <div class="pack-header">Pack:</div>
+                                <div id="photo-item-container">
+                                    {packItems}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7 justify-content-between align-items-center" id="order-total-container">
+                                <button type="button" class="btn btn-primary col-6 col-sm-7 col-md-8" id="checkout-button">Checkout</button>
+                                <div class="order-total-info-box col-auto">
+                                    <div class="order-total-header">Order Total:</div>
+                                    <div class="order-total-value">${this.props.packItems.reduce((total, packItem) => {
+                                        return total + (packItem.price * packItem.quantity);
+                                        }, 0).toFixed(2)}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                )
+            } else { // Assertion: no pack items to display
+                return (
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7" id="pack-header-container">
+                            <div class="pack-header">Your pack is empty. Let's fill it up!</div>
+                            <div id="pack-description">Hover over photos to select sizing options.</div>
+                            <div id="continue-shopping-button">
+                                <a href="/">Continue Shopping</a>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        }
+
         return (
             <div class="container-fluid" id="max-container">
                 <div class="row justify-content-center align-items-center" id="navbar-row">
                     <NavBar/>
                 </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7" id="pack-header-container">
-                        <div class="pack-header">Your pack is empty. Let's fill it up!</div>
-                        <div id="pack-description">Hover over photos to select sizing options.</div>
-                        <div id="continue-shopping-button">
-                            <a href="/">Continue Shopping</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7" id="pack-container">
-                        <div class="pack-header">Pack:</div>
-                        <div id="photo-item-container">
-                            {packItems}
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-11 col-sm-10 col-md-9 col-lg-7 col-xl-7 justify-content-between align-items-center" id="order-total-container">
-                        {/* <div id="checkout-button" class="col-6">
-                            <a href="/">Checkout</a>
-                        </div> */}
-                        <button type="button" class="btn btn-primary col-6 col-sm-7 col-md-8" id="checkout-button">Checkout</button>
-                        <div class="order-total-info-box col-auto">
-                            <div class="order-total-header">Order Total:</div>
-                            <div class="order-total-value">${this.props.packItems.reduce((total, packItem) => {
-                                return total + (packItem.price * packItem.quantity);
-                                }, 0).toFixed(2)}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {packShowAndHeaderInfo()}
             </div>
         );
     }
