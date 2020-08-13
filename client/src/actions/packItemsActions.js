@@ -1,10 +1,16 @@
-import { GET_PACK_ITEMS, CREATE_PACK_ITEM, DELETE_PACK_ITEM } from './types';
+import axios from 'axios';
+import { GET_PACK_ITEMS, CREATE_PACK_ITEM, DELETE_PACK_ITEM, LOADING_PACK_ITEMS } from './types';
 
-export const getPackItems = () => {
+export const getPackItems = () => dispatch => {
     console.log('fetching packItems...');
-    return {
-        type: GET_PACK_ITEMS
-    }
+    dispatch(setPackItemsLoading());
+    axios
+        .get('/api/packItems')
+        .then(res => 
+            dispatch({
+                type: GET_PACK_ITEMS,
+                payload: res.data
+            }))
 }
 
 export const createPackItem = (packItem) => {
@@ -20,5 +26,11 @@ export const deletePackItem = (url) => {
     return {
         type: DELETE_PACK_ITEM,
         payload: url
+    }
+}
+
+export const setPackItemsLoading = () => {
+    return {
+        type: LOADING_PACK_ITEMS
     }
 }

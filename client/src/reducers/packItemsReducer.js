@@ -1,9 +1,10 @@
-import { GET_PACK_ITEMS, CREATE_PACK_ITEM, DELETE_PACK_ITEM } from '../actions/types.js';
+import { GET_PACK_ITEMS, CREATE_PACK_ITEM, DELETE_PACK_ITEM, LOADING_PACK_ITEMS } from '../actions/types.js';
 
 // Pack Items that come from actions
 const initialState = {
     packItems: [],
-    packItem: {}
+    packItem: {},
+    loading: false
 }
 
 // Evaluates what type we are dealing with
@@ -18,7 +19,9 @@ export default function(state = initialState, action) {
             return {
                 // Use spread operator because we can't directly change state
                 // Need to make a copy of it
-                ...state
+                ...state,
+                packItems: action.payload,
+                loading: false
             };
         case CREATE_PACK_ITEM:
             console.log('CREATE_PACK_ITEM reducer executed.')
@@ -32,6 +35,11 @@ export default function(state = initialState, action) {
                 ...state,
                 packItems: state.packItems.filter(packItem => packItem.url !== action.payload)
             };
+        case LOADING_PACK_ITEMS:
+            return {
+                ...state,
+                loading: true
+            }
         default:
             return state;
     }
