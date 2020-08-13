@@ -9,7 +9,6 @@ import { createPackItem, getPackItems } from '../actions/packItemsActions';
 
 class Photography extends React.Component {
     
-    // const [modalShow, setModalShow] = React.useState(false);
     constructor(props) {
         super(props);
         this.state = {
@@ -31,6 +30,7 @@ class Photography extends React.Component {
 
     componentDidMount() {
         this.props.getPackItems();
+        this.props.createPackItem();
     }
 
     modalShow = () => {
@@ -192,13 +192,15 @@ class Photography extends React.Component {
 const mapStateToProps = state => ({
     // 2nd packItems matches with reducer key in index.js
     // 3rd packItems is from payload ID in the reducer (packItemsReducer.js)
-    packItems: state.packItems.packItems
+    packItems: state.packItems.packItems,
+    packItem: state.packItems.packItem
 });
 
 Photography.propTypes = {
     createPackItem: PropTypes.func.isRequired,
     getPackItems: PropTypes.func.isRequired,
-    packItems: PropTypes.array.isRequired
+    packItems: PropTypes.array.isRequired,
+    packItem: PropTypes.object.isRequired
 }
 
 export default connect(mapStateToProps, { createPackItem, getPackItems })(Photography);

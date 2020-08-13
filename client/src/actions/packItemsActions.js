@@ -1,4 +1,4 @@
-import { GET_PACK_ITEMS, CREATE_PACK_ITEM } from './types';
+import { GET_PACK_ITEMS, CREATE_PACK_ITEM, DELETE_PACK_ITEM } from './types';
 
 export const getPackItems = () => dispatch => {
     console.log('fetching packItems...');
@@ -25,4 +25,12 @@ export const createPackItem = (packItemData) => dispatch => {
             type: CREATE_PACK_ITEM,
             payload: packItem
         }));
+}
+
+export const deletePackItem = (url) => {
+    console.log('deleting packItem...');
+    return {
+        type: DELETE_PACK_ITEM,
+        payload: url
+    }
 }

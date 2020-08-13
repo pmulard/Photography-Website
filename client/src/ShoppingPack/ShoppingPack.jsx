@@ -4,12 +4,13 @@ import './ShoppingPack.css';
 import NavBar from '../NavBar/NavBar';
 
 import { connect } from 'react-redux';
-import { getPackItems } from '../actions/packItemsActions';
+import { getPackItems, deletePackItem } from '../actions/packItemsActions';
 
 class ShoppingPack extends React.Component {
 
     componentDidMount() {
         this.props.getPackItems();
+        this.props.deletePackItem();
     }
 
     render() {
@@ -43,7 +44,13 @@ class ShoppingPack extends React.Component {
                         </div>
                     </div>   
                 </div>
-                <button type="button" class="remove-button btn btn-outline-danger col-1">x</button>
+                <button 
+                    type="button" 
+                    class="remove-button btn btn-outline-danger col-1" 
+                    onClick={() => {
+                        this.props.deletePackItem(packItem.url);
+                    }}
+                >x</button>
             </div>
         ));
 
@@ -92,14 +99,17 @@ class ShoppingPack extends React.Component {
 //Add props to proptypes
 ShoppingPack.propTypes = {
     getPackItems: PropTypes.func.isRequired,
-    packItems: PropTypes.array.isRequired
+    deletePackItem: PropTypes.func.isRequired,
+    packItems: PropTypes.array.isRequired,
+    packItem: PropTypes.object.isRequired
 }
 
 // Get items from redux state and map to properties of the component
 const mapStateToProps = state => ({
     // 2nd packItems matches with reducer key in index.js
-    // 3rd packItems is from payload ID in the reducer (addPackItemReducer.js)
-    packItems: state.packItems.packItems
+    // 3rd packItems is from payload ID in the reducer (packItemsReducer.js)
+    packItems: state.packItems.packItems,
+    packItem: state.packItems.packItem
 });
 
-export default connect(mapStateToProps, { getPackItems })(ShoppingPack);
+export default connect(mapStateToProps, { getPackItems, deletePackItem })(ShoppingPack);
