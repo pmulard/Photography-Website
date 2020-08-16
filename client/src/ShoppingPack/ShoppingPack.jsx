@@ -17,7 +17,7 @@ class ShoppingPack extends React.Component {
         const packItems = this.props.packItems.map(packItem => (
             <div class="photo-item row" key={packItem._id}>
                 <div class="photo-item-img-container col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-                    <img src={packItem.url} alt={packItem._id}/>
+                    <img src={`/photographyPhotos/${packItem.url}`} alt={packItem._id}/>
                 </div>
                 <div class="photo-item-info-container col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 ">
                     <div class="photo-item-info-box row"> 

@@ -29,7 +29,7 @@ export const createPackItem = (packItem) => dispatch => {
 export const deletePackItem = (id) => dispatch => {
     console.log('deleting packItem...');
     axios
-        .delete(`/api/packItems/:${id}`)
+        .delete(`/api/packItems/${id}`)
         .then(res => {
             dispatch({
                 type: DELETE_PACK_ITEM,

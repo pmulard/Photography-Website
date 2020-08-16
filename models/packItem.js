@@ -25,4 +25,4 @@ const ItemSchema = new Schema({
     }
 });
 
-module.exports = Item = mongoose.model('packItem', ItemSchema);
+module.exports = PackItem = mongoose.model('packitems', ItemSchema);
