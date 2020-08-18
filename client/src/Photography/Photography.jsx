@@ -137,10 +137,12 @@ class Photography extends React.Component {
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
                         <div id="image-location">California</div>
-                        <Button variant="primary" onClick={this.modalShow} id="ADD-PACK-BUTTON"><div id="main-image-box">
-                            <img src="photographyPhotos/Onion_Valley_MilkyWay.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
-                            <div id="add-pack-button" class="container-fluid"><img src="/icons/plusSign.svg" alt=""/></div>
-                        </div></Button>
+                        <div id="align-button-image">
+                            <Button variant="primary" onClick={this.modalShow} id="ADD-PACK-BUTTON"><div id="main-image-box">
+                                <img src="photographyPhotos/Onion_Valley_MilkyWay.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
+                                <div id="add-pack-button" class="container-fluid"><img src="/icons/plusSign.svg" alt=""/></div>
+                            </div></Button>
+                        </div>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center">
