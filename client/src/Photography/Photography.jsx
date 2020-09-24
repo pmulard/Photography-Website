@@ -136,10 +136,10 @@ class Photography extends React.Component {
                 </Modal>
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
-                        <div id="image-location">California</div>
+                        <div id="image-location">Wyoming</div>
                         <div id="align-button-image">
                             <Button variant="primary" onClick={this.modalShow} id="ADD-PACK-BUTTON"><div id="main-image-box">
-                                <img src="photographyPhotos/Onion_Valley_MilkyWay.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
+                                <img src="photographyPhotos/Cirque_Lake_Reflection.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
                                 <div id="add-pack-button" class="container-fluid"><img src="/icons/plusSign.svg" alt=""/></div>
                             </div></Button>
                         </div>
@@ -148,7 +148,7 @@ class Photography extends React.Component {
                 <div class="row justify-content-center align-items-center">
                     <div class="trapezoid col-9 col-md-8 col-lg-7 col-xl-6" align="center"></div>
                     <div class="scrolling-wrapper col-8 col-md-7 col-lg-6 col-xl-5" align="center">
-                        <div class="card"><img src="photographyPhotos/WindAndSea_Beach.jpg" alt=""/></div>
+                        <div class="card"><img src="photographyPhotos/Cirque_Fall_Colors.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Canyonlands_MilkyWay.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Genie_Lamp_Rock.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Yosemite_Aspens.jpg" alt=""/></div>
