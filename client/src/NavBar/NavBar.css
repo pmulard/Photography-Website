@@ -2,12 +2,16 @@
     transition: ease all 1s;
 }
 
+.container-fluid {
+    align-content: center;
+    vertical-align: center;
+}
+
 .navbar-strip {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 3.5vh 0;
     width: 100%;
     height: 100%;
-	margin: 0px;
+    margin: 0px;
 }
 
     @media screen and (max-width: 800px) {
@@ -55,6 +59,24 @@
             padding: 10px;
         }
     }
+
+    @media screen and (max-width: 440px) {
+        .navbar-link {
+            font-size: 7px;
+            letter-spacing: .05em;
+            padding: 10px 6px;
+        }
+    }
+
+    @media screen and (max-width: 300px) {
+        .navbar-link {
+            font-size: 6px;
+            letter-spacing: .04em;
+            padding: 10px 5px;
+        }
+    }
+
+    
 
     .navbar-link:hover {
         background: -webkit-linear-gradient(360deg, hsl(280, 36%, 52%),hsl(209, 59%, 60%), hsl(181, 36%, 52%));
@@ -130,6 +152,20 @@
         .logo img {
             width: 64px;
             height: 51px;
+        }
+    }
+
+    @media screen and (max-width: 440px) {
+        .logo img {
+            width: 50px;
+            height: 40px;
+        }
+    }
+
+    @media screen and (max-width: 300px) {
+        .logo img {
+            width: 40px;
+            height: 32px;
         }
     }
     

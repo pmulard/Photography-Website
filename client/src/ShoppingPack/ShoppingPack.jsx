@@ -32,10 +32,10 @@ class ShoppingPack extends React.Component {
                         <div class="quantity-container col-3">
                             <div class="photo-item-info-label">Count:</div>
                             <div class="photo-item-info-value">{packItem.quantity}</div>
-                            <div class="photo-item-quantity-buttons-container">
+                            {/* <div class="photo-item-quantity-buttons-container">
                                 <span class="quantity-decrease">&nbsp;&nbsp;-&nbsp;</span>
                                 <span class="quantity-increase">+</span>
-                            </div>
+                            </div> */}
                         </div>
                         <div class="total-price col-3">
                             <div class="photo-item-info-label">Total:</div>
