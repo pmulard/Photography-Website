@@ -6,6 +6,7 @@ import { Modal, Button, Form, Col, Table }from 'react-bootstrap';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createPackItem, getPackItems } from '../actions/packItemsActions';
+import { getPhotoItems } from '../actions/photoItemsActions';
 
 class Photography extends React.Component {
     
@@ -30,6 +31,7 @@ class Photography extends React.Component {
 
     componentDidMount() {
         this.props.getPackItems();
+        this.props.getPhotoItems();
     }
 
     modalShow = () => {
@@ -157,7 +159,7 @@ class Photography extends React.Component {
                         <div class="card"><img src="photographyPhotos/Lake_Louise_Panorama.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Beartooths_Wildflowers_Creek.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Fossile_Lake.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Granite_Peak.jpg" alt=""/></div>
+                        {/* <div class="card"><img src="photographyPhotos/Granite_Peak.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Sky_Top_Lakes.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Swirling_Waterfall.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Devils_Churn.jpg" alt=""/></div>
@@ -172,7 +174,7 @@ class Photography extends React.Component {
                         <div class="card"><img src="photographyPhotos/Onion_Valley_MilkyWay.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Glen_Pass_Tent_MilkyWay.jpg" alt=""/></div>
                         <div class="card"><img src="photographyPhotos/Rae_Lakes_Sunset.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Kearsarge_Lakes_MilkyWay.jpg" alt=""/></div>
+                        <div class="card"><img src="photographyPhotos/Kearsarge_Lakes_MilkyWay.jpg" alt=""/></div> */}
                     </div>
                 </div>
             </div>
@@ -192,14 +194,21 @@ const mapStateToProps = state => ({
     // 2nd packItems matches with reducer key in index.js
     // 3rd packItems is from payload ID in the reducer (packItemsReducer.js)
     packItems: state.packItems.packItems,
-    packItem: state.packItems.packItem
+    packItem: state.packItems.packItem,
+    photoItems: state.photoItems.photoItems,
+    photoItem: state.photoItems.photoItem
 });
 
 Photography.propTypes = {
+    // Pack Items props
     createPackItem: PropTypes.func.isRequired,
     getPackItems: PropTypes.func.isRequired,
     packItems: PropTypes.array.isRequired,
-    packItem: PropTypes.object.isRequired
+    packItem: PropTypes.object.isRequired,
+    // Photo Items props
+    getPhotoItems: PropTypes.func.isRequired,
+    photoItems: PropTypes.array.isRequired,
+    photoItem: PropTypes.object.isRequired,
 }
 
-export default connect(mapStateToProps, { createPackItem, getPackItems })(Photography);
+export default connect(mapStateToProps, { createPackItem, getPackItems, getPhotoItems })(Photography);
