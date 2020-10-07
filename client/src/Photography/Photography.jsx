@@ -66,6 +66,10 @@ class Photography extends React.Component {
 
 
     render() {
+        const photoItems = this.props.photoItems.map(photoItem => (
+            <div class="card" id={photoItem._id}><img src={"photographyPhotos/"+photoItem.url} alt={photoItem.name}/></div>
+        ));
+
         return (
             <div class="container-fluid" id="max-container">
                 <div class="row justify-content-center align-items-center" id="navbar-row">
@@ -150,31 +154,7 @@ class Photography extends React.Component {
                 <div class="row justify-content-center align-items-center">
                     <div class="trapezoid col-9 col-md-8 col-lg-7 col-xl-6" align="center"></div>
                     <div class="scrolling-wrapper col-8 col-md-7 col-lg-6 col-xl-5" align="center">
-                        <div class="card"><img src="photographyPhotos/Cirque_Fall_Colors.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Cirque_Lake_Reflection.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Canyonlands_MilkyWay.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Genie_Lamp_Rock.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Fish_Bowl_Sunset.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Cape_Flattery_Sunset.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Lake_Louise_Panorama.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Beartooths_Wildflowers_Creek.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Fossile_Lake.jpg" alt=""/></div>
-                        {/* <div class="card"><img src="photographyPhotos/Granite_Peak.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Sky_Top_Lakes.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Swirling_Waterfall.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Devils_Churn.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Dark_Canyon_Ruins.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Canyon_Waterfall.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Maroon_Bells.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Temple_Craig.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Temple_Craig_Sunrise.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Fifth_Lake_Flowers.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Fifth_Lake_Sunset.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Fifth_Lake_MilkyWay.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Onion_Valley_MilkyWay.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Glen_Pass_Tent_MilkyWay.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Rae_Lakes_Sunset.jpg" alt=""/></div>
-                        <div class="card"><img src="photographyPhotos/Kearsarge_Lakes_MilkyWay.jpg" alt=""/></div> */}
+                        {photoItems}
                     </div>
                 </div>
             </div>
