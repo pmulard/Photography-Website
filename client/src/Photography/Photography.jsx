@@ -20,6 +20,8 @@ class Photography extends React.Component {
                 '24"x32"': 56.00
             },
             url: 'Onion_Valley_MilkyWay.jpg',
+            name: 'Onion_Valley_MilkyWay',
+            location: 'California',
             size: '8"x12"',
             price: 28.00,
             quantity: 1
@@ -142,10 +144,10 @@ class Photography extends React.Component {
                 </Modal>
                 <div class="row justify-content-center align-items-center">
                     <div class="image-container col-10 col-md-8 col-lg-6">
-                        <div id="image-location">Wyoming</div>
+                        <div id="image-location">{this.state.location}</div>
                         <div id="align-button-image">
                             <Button variant="primary" onClick={this.modalShow} id="ADD-PACK-BUTTON"><div id="main-image-box">
-                                <img src="photographyPhotos/Cirque_Fall_Colors.jpg" alt="" class="img-fluid mx-auto d-block" id="main-image"/>
+                                <img src={"photographyPhotos/"+this.state.url} alt={this.state.name} class="img-fluid mx-auto d-block" id="main-image"/>
                                 <div id="add-pack-button" class="container-fluid"><img src="/icons/plusSign.svg" alt=""/></div>
                             </div></Button>
                         </div>
